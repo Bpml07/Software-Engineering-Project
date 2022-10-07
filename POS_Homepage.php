@@ -174,7 +174,7 @@
 				<div class = "card">
 					<h2>VR News</h2>
 					<div class = "img" style = "height: 150px;">
-						<img src ="images/PointOfSalePic.webp" class = "center" style = "height: 500px; width: 100%;">
+						<img src ="images/PointOfSalePic.webp" class = "center" style = "height: 400px; width: 100%;">
 					</div>
 				
 				</div>
