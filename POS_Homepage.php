@@ -175,6 +175,7 @@
 					<h2>VR News</h2>
 					<div class = "img" style = "height: 150px;">
 						[POS PICTURES]
+						<img src ="images/PointOfSalePic.webp" class "center" style = "height: 200px; width: 20%;">
 					</div>
 					<p>Take a look at some functionalites of our Point of Sale!.</p>
 				</div>
