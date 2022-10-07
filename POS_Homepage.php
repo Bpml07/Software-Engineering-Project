@@ -137,7 +137,8 @@
 		</div>
 		
 		<div class = "topnav">
-			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_Homepage.php">Home</a>
+			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_Homepage.php">Home</a>		
+			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_Menu.php"> Menu</a>	
 			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_Contact.php">Contact Us</a>
 			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_About.php" style = "float: right">About</a>
 		</div>
