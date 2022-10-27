@@ -159,11 +159,7 @@
 		</div>
 		
 		<div class = "topnav">
-        <a href = "https://codd.cs.gsu.edu/~bpo1/POS_Home.php">Home</a>	
-			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_Drinks.php">Drinks</a>		
-			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_Apps.php"> Appetizers</a>	
-			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_Entree.php">Entrées</a>
-			<a href = "https://codd.cs.gsu.edu/~bpo1/POS_More.php" style = "float: right">More</a>
+        <a href = "https://codd.cs.gsu.edu/~bpo1/POS_Homepage.php">Tables</a>	
 		</div>
 		
 		<div class = "row">
