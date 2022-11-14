@@ -12,6 +12,8 @@
           echo "Connected";
       }
     
+    // This fetchs the table from the database and displays it
+    
     // $query = 'SELECT * FROM table';
     // $results = pg_query($con, $query) or die('Query failed: ' . pg_last_error());
     
