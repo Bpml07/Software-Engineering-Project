@@ -167,46 +167,68 @@
 					<h2>Drinks</h2>
 					<div class = "card">
                     	<div class="btn-group" style="width:100%">
-                          <button style="width:25%">Coke</button>
-                          <button style="width:25%">Sprite</button>
-                          <button style="width:25%">Coffee</button>
-                          <button style="width:25%">Hot Chocolate</button>
+                          <button onclick="listAdd('Coke')" style="width:25%">Coke</button>
+                          <button onclick="listAdd('Sprite')" style="width:25%">Sprite</button>
+                          <button onclick="listAdd('Coffee')" style="width:25%">Coffee</button>
+                          <button onclick="listAdd('Hot Chocolate')" style="width:25%">Hot Chocolate</button>
                         </div>
                     </div>
                     <h2>Appetizers</h2>
 					<div class = "card">
                     	<div class="btn-group" style="width:100%">
-                          <button style="width:25%">Mini Quiche</button>
-                          <button style="width:25%">Deviled Eggs</button>
-                          <button style="width:25%">Cinnamon Roll</button>
-                          <button style="width:25%">Mini French Toast</button>
+                          <button onclick="listAdd('Mini Quiche')" style="width:25%">Mini Quiche</button>
+                          <button onclick="listAdd('Deviled Eggs')" style="width:25%">Deviled Eggs</button>
+                          <button onclick="listAdd('Cinnamon Roll')" style="width:25%">Cinnamon Roll</button>
+                          <button onclick="listAdd('Mini French Toast')" style="width:25%">Mini French Toast</button>
                         </div>
                         <div class="btn-group" style="width:100%">
-                          <button style="width:25%">Grilled Cheese Sliders</button>
+						<p id="addToList"> </p>
+                          <button onclick="listAdd('Grilled Cheese Slider')" style="width:25%">Grilled Cheese Sliders</button>
                         </div>
                     </div>
                     <h2>Entrées</h2>
 					<div class = "card">
                     	<div class="btn-group" style="width:100%">
-                          <button style="width:25%">Veggie Omelette</button>
-                          <button style="width:25%">The Infinity Omelette</button>
-                          <button style="width:25%">Classic American Breakfast</button>
-                          <button style="width:25%">Maple-Glazed Salmon</button>
+                          <button onclick="listAdd('Veggie Omelette')" style="width:25%">Veggie Omelette</button>
+                          <button onclick="listAdd('The Infinity Omelette')" style="width:25%">The Infinity Omelette</button>
+                          <button onclick="listAdd('Classic American Breakfast')" style="width:25%">Classic American Breakfast</button>
+                          <button onclick="listAdd('Maple-Glazed Salmon')" style="width:25%">Maple-Glazed Salmon</button>
                         </div>
                         <div class="btn-group" style="width:100%">
-                          <button style="width:25%">Pancake Stacker</button>
-                          <button style="width:25%">Good Morning Burger</button>
-                          <button style="width:25%">Mega Croissant</button>
-                          <button style="width:25%">Kid's Meal</button>
+                          <button onclick="listAdd('Pancake Stacker')" style="width:25%">Pancake Stacker</button>
+                          <button onclick="listAdd('Good Morning Burger')" style="width:25%">Good Morning Burger</button>
+                          <button onclick="listAdd('Mega Croissant')" style="width:25%">Mega Croissant</button>
+                          <button onclick="listAdd('Kids Meal')" style="width:25%">Kid's Meal</button>
                         </div>
+
+						
                     </div>
-				</div>
-		</div>
+
+					<!-- Ordered List -->
+					<u1 id="orderList">
+					
+					<!-- Creates an "orderList" -->
+					<script>
+
+						function listAdd(text){
+							listNode = document.getElementById('orderList');
+							liNode = document.createElement('LI');
+							txtNode = document.createTextNode(text);
+							liNode.appendChild(txtNode);
+							listNode.appendChild(liNode);
+						}
+    				</script>
 		
+		<!-- button to submit to database -->
 		<div class = "footer">
 			<p>
 				<h5>&copy2021 Team7, All Rights Reserved</h5> 
 			</p>
 		</div>
-	</body>
+		<form action="POSDatabase_Connection.php" method="POST">
+		<input type="hidden" name="query" value="INSERT INTO public.&quot;orders&quot; (customer_order) VALUES(ARRAY ['TEST', 'TEST2'])" />
+        <input type="submit" name="button1"
+                class="button" value="Submit" />
+    </form>
+	</body>	
 </html>
