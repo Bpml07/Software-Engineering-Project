@@ -226,9 +226,12 @@
 			</p>
 		</div>
 		<form action="POSDatabase_Connection.php" method="POST">
-		<input type="hidden" name="query" value="INSERT INTO public.&quot;orders&quot; (customer_order) VALUES(ARRAY ['TEST', 'TEST2'])" />
+		<input type="hidden" name="query" value="INSERT INTO public.&quot;orders&quot; (customer_order) VALUES(ARRAY [print_r($orderList)])" />
         <input type="submit" name="button1"
                 class="button" value="Submit" />
     </form>
+	<!-- <?php
+		print_r($orderList);
+	?> -->
 	</body>	
 </html>
