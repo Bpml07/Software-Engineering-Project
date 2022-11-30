@@ -1,212 +1,174 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	
-		<title>Menu</title>
-		<meta charset="utf-8">
-		<meta name = "viewport" content = "width=device-width, initial-scale=1">
-		<style>
-			*{
-			box-sizing: border-box;
-			}
-		
-			body
-			{
-				font-family: Arial;
-				padding: 10px;
-				background: #f1f1f1;
-			}
-			
-			
-/* styling */
-	/* header */
-			.header
-			{
-				padding: 30px;
-				text-align: center;
-				background: white;
-			}
-	
-			.header h1
-			{
-				font-size: 50px;
-			}
-	/* topnav bar */
-			.topnav
-			{
-				overflow: hidden;
-				background-color: black;
-				
-			}
-	/* topnav links */
-			.topnav a 
-			{
-				float: left;
-				display: block;
-				color: white;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-			}
-	/* topnav hover color */
-			.topnav a:hover
-			{
-				background-color: #ddd;
-				color: black;
-			}
-			/*
-	/* columns (body) */
-			.leftcolumn
-			{
-				float: left;
-				width: 75%;
-			}
-			
-			.rightcolumn
-			{
-				float: left;
-				width: 25%;
-				background=color: #f1f1f1;
-				padding-left: 20px;
-			}
-			
-	 /*card effect */
-			.card
-			{
-				background-color: white;
-				padding: 20px;
-				margin-top: 20px;
-			}
-			
-	/* clear floats after columns */
-			.row:after
-			{
-				content: "";
-				display: table;
-				clear: both;
-			}
-	
-	/* responsive layout effects */
-			@media screen and (max-width:800px)
-			{
-				.leftcolumn, .rightcolumn
-				{
-					width: 100%;
-					padding: 0;
-				}
-			}
-			
-			@media screen and (max-width:400px)
-			{
-				.leftcolumn, .rightcolumn
-				{
-					width: 100%;
-					float: none;
-				}
-			}
-			
-	/* footer */
-			.footer
-			{
-				background-color: lightgrey;
-				padding: 20px;
-				margin-top: 20px;
-				text-align: right;
-			}
-			
-			.center 
-			{
-			  display: block;
-			  margin-left: auto;
-			  margin-right: auto;
-			  width: 50%;
-			}
-			
-            .btn-group button {
-              background-color: #ADD8E6; /* light blue background */
-              border: 1px solid black; /* black border */
-              color: black; /* Black text */
-              padding: 35px 24px; /* Some padding */
-              cursor: pointer; /* Pointer/hand icon */
-              float: left; /* Float the buttons side by side */
-            }
+<?php
+include_once('includes/header.php')
+?>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+	<div class="offcanvas-header">
+		<h5 class="offcanvas-title" id="cartLabel">Cart</h5>
+		<div class="btn-close" data-bs-dismiss="offcanvas"></div>
+	</div>
+	<div class="offcanvas-body">
+		<ul class="cart-items navbar-nav justify-content-end flex-grow-1 pe-3">
 
-            /* Clear floats (clearfix hack) */
-            .btn-group:after {
-              content: "";
-              clear: both;
-              display: table;
-            }
+		</ul>
+		<ul>
+			<li class="nav-item">
 
-            .btn-group button:not(:last-child) {
-              border-right: none; /* Prevent double borders */
-            }
 
-            /* Add a background color on hover */
-            .btn-group button:hover {
-              background-color: #f1f1f1;
-            }
-		</style>
-		
-		<script>
-		</script>
-	
-	</head>
-	<body>
-		<div class = "header">
-			<h1>7 Brunch</h1>
-			<p>TABLE NUMBER HERE</p>
-		</div>
-		
-		<div class = "topnav">
-        <a href = "https://codd.cs.gsu.edu/~bpo1/POS_Homepage.php">Tables</a>	
-		</div>
-		
-		<div class = "row">
-				<div class = "card">
-					<h2>Drinks</h2>
-					<div class = "card">
-                    	<div class="btn-group" style="width:100%">
-                          <button style="width:25%">Coke</button>
-                          <button style="width:25%">Sprite</button>
-                          <button style="width:25%">Coffee</button>
-                          <button style="width:25%">Hot Chocolate</button>
-                        </div>
-                    </div>
-                    <h2>Appetizers</h2>
-					<div class = "card">
-                    	<div class="btn-group" style="width:100%">
-                          <button style="width:25%">Mini Quiche</button>
-                          <button style="width:25%">Deviled Eggs</button>
-                          <button style="width:25%">Cinnamon Roll</button>
-                          <button style="width:25%">Mini French Toast</button>
-                        </div>
-                        <div class="btn-group" style="width:100%">
-                          <button style="width:25%">Grilled Cheese Sliders</button>
-                        </div>
-                    </div>
-                    <h2>Entrées</h2>
-					<div class = "card">
-                    	<div class="btn-group" style="width:100%">
-                          <button style="width:25%">Veggie Omelette</button>
-                          <button style="width:25%">The Infinity Omelette</button>
-                          <button style="width:25%">Classic American Breakfast</button>
-                          <button style="width:25%">Maple-Glazed Salmon</button>
-                        </div>
-                        <div class="btn-group" style="width:100%">
-                          <button style="width:25%">Pancake Stacker</button>
-                          <button style="width:25%">Good Morning Burger</button>
-                          <button style="width:25%">Mega Croissant</button>
-                          <button style="width:25%">Kid's Meal</button>
-                        </div>
-                    </div>
+				<div class="container d-flex justify-content-between">
+					<h6>
+						SUBTOTAL
+					</h6>
+					<h6 class="cart-total-price">
+
+					</h6>
 				</div>
+				<hr />
+			</li>
+			<li class="nav-item">
+				<div class="container d-flex">
+					<h6 class="check-out-item">
+
+						<script>
+
+						</script>
+
+					</h6>
+				</div>
+				<hr />
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="topnav d-flex justify-content-between">
+	<a href="<?= HOST ?>POS_Homepage.php">Tables</a>
+	<div class="text-white " role="button" style="padding:14px 16px" data-bs-toggle="offcanvas" data-bs-target="#cart">
+		Cart
+	</div>
+</div>
+
+<div class="row  w-100 m-0">
+	<div class="card">
+		<h2>Drinks</h2>
+		<div class="card">
+			<div class="btn-group" style="width:100%">
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">1</div>
+					<div class="name" style="border:none;padding:0px"> Coke</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$2.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">2</div>
+					<div class="name" style="border:none;padding:0px"> Sprite</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$2.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">3</div>
+					<div class="name" style="border:none;padding:0px"> Coffee</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$3.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">4</div>
+					<div class="name" style="border:none;padding:0px"> Hot Chocolate</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$4.00</div>
+				</div>
+
+			</div>
 		</div>
-		
-		<div class = "footer">
-			<p>
-				<h5>&copy2021 Team7, All Rights Reserved</h5> 
-			</p>
+		<h2>Appetizers</h2>
+		<div class="card">
+			<div class="btn-group" style="width:100%">
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">5</div>
+					<div class="name" style="border:none;padding:0px"> Mini Quiche</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$5.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">6</div>
+					<div class="name" style="border:none;padding:0px"> Deviled Eggs</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$6.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">7</div>
+					<div class="name" style="border:none;padding:0px"> Cinnamon Roll</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$10.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">8</div>
+					<div class="name" style="border:none;padding:0px"> Mini French Toast</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$8.00</div>
+				</div>
+
+			</div>
+			<div class="btn-group" style="width:100%">
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">9</div>
+					<div class="name" style="border:none;padding:0px"> Grilled Cheese Sliders</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$6.00</div>
+				</div>
+
+			</div>
 		</div>
-	</body>
+		<h2>Entrées</h2>
+		<div class="card">
+			<div class="btn-group" style="width:100%">
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">10</div>
+					<div class="name" style="border:none;padding:0px"> Veggie Omelette</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$4.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">11</div>
+					<div class="name" style="border:none;padding:0px"> The Infinity Omelette</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$12.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">12</div>
+					<div class="name" style="border:none;padding:0px"> Classic American Breakfast</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$6.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">13</div>
+					<div class="name" style="border:none;padding:0px"> Maple-Glazed Salmon</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$5.00</div>
+				</div>
+
+			</div>
+			<div class="btn-group" style="width:100%">
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">14</div>
+					<div class="name" style="border:none;padding:0px"> Pancake Stacker</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$3.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">15</div>
+					<div class="name" style="border:none;padding:0px"> Good Morning Burger</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$6.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">16</div>
+					<div class="name" style="border:none;padding:0px"> Mega Croissant</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$7.00</div>
+				</div>
+				<div class="button">
+					<div class="id" style="border:none;padding:0px; display:none;">17</div>
+					<div class="name" style="border:none;padding:0px"> Kid's Meal</div>
+					<div class="price" style="border:none;padding:0px;padding-top:10px">$4.00</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<p>
+	<h5>&copy2021 Team7, All Rights Reserved</h5>
+	</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="main.js"></script>
+</body>
+
 </html>
