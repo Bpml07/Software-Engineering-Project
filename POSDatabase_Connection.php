@@ -3,6 +3,7 @@
     $user = "sqdfduqm";
     $pass = "ghx2QdG27NJUg7w73xPIG9FEnrjDBD2p";
     $db = "sqdfduqm";
+    $query = "";
     
     // Open a PostgreSQL connection
     $con = pg_connect("host=$host dbname=$db user=$user password=$pass")
@@ -12,13 +13,12 @@
           echo "Connected";
       }
     
-    // This fetchs the table from the database and displays it
     
-    // $query = 'SELECT * FROM table';
-    // $results = pg_query($con, $query) or die('Query failed: ' . pg_last_error());
+    if(isset($_POST['query']))  $query = $_POST['query']; 
+    
+    $results = pg_query($con, $query) or die('Query failed: ' . pg_last_error());
     
     // $row = pg_fetch_row($results);
-    // echo $row[0] . "\n";
 
 
     // Closing connection
